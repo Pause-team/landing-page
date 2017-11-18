@@ -23,6 +23,9 @@ $(function(){
                 window.user = firebase.auth().currentUser;
                 $("#username").html(window.user.displayName);
                 $("#user-img").attr('src', window.user.photoURL);
+                if(chrome)  {
+                    window.postMessage(JSON.stringify(window.user));
+                }
             }
         }, 300);
     }
