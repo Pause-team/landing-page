@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2017 at 07:08 PM
+-- Generation Time: Dec 03, 2017 at 08:41 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -61,6 +61,14 @@ CREATE TABLE `user` (
   `last_login` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `email`, `name`, `created_on`, `last_login`) VALUES
+('\"9ww3BCuTu0P9DKQ5sKfIHP8rIV83\"', 'swarnims@bu.edu', 'Swarnim Rajneesh Sinha', '0000-00-00 00:00:00', '2017-12-02 22:17:08'),
+('\"NplPz09KpMOJ1HnElCMXjnXUBlU2\"', 'swarnimsinha1994@gmail.com', 'Swarnim Sinha', '0000-00-00 00:00:00', '2017-12-01 20:12:43');
+
 -- --------------------------------------------------------
 
 --
@@ -69,14 +77,24 @@ CREATE TABLE `user` (
 
 CREATE TABLE `video` (
   `video_id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
+  `video_title` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `video_progress` varchar(255) NOT NULL,
   `total_duration` varchar(255) NOT NULL,
   `created_on` datetime NOT NULL,
   `last_viewed` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `video`
+--
+
+INSERT INTO `video` (`video_id`, `user_id`, `video_title`, `url`, `video_progress`, `total_duration`, `created_on`, `last_viewed`) VALUES
+(28, '\"9ww3BCuTu0P9DKQ5sKfIHP8rIV83\"', 'Day[9] HearthStone Decktacular #323 - Elemental Control Mage', 'https://www.youtube.com/watch?v=dNVicRxv2AY', '31.165728', '6708.741', '0000-00-00 00:00:00', '2017-12-02 22:17:08'),
+(25, '\"9ww3BCuTu0P9DKQ5sKfIHP8rIV83\"', 'harry potter', 'https://www.youtube.com/watch?v=KIPTE0R5WPA', '59.04007', '7076.501', '0000-00-00 00:00:00', '2017-12-01 23:44:42'),
+(17, '\"NplPz09KpMOJ1HnElCMXjnXUBlU2\"', 'Friday Hearthstone - P3', 'https://www.youtube.com/watch?v=KIPTE0R5WPA', '51.03114', '7076.501', '0000-00-00 00:00:00', '2017-12-01 20:12:43'),
+(24, 'NplPz09KpMOJ1HnElCMXjnXUBlU2', '', 'https://www.youtube.com/watch?v=KIPTE0R5WPA', '39.032482', '7076.501', '0000-00-00 00:00:00', '2017-12-01 02:11:16');
 
 --
 -- Indexes for dumped tables
@@ -124,7 +142,7 @@ ALTER TABLE `playlist`
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
