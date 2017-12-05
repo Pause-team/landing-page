@@ -139,7 +139,7 @@
             window.open(e.currentTarget.dataset.link);
         });
         $("#signout").click(function(e){
-            window.open("/index.php", "_self");
+            window.localtion.replace("https://pause.trixster.xyz/", "_self");
         });
     </script>
 </body>
