@@ -68,8 +68,8 @@
                             echo "<tr>";
                             echo "<td>" . $row["video_id"]. "</td>";
                             echo "<td><a href=$url class='video_name' target=\"_blank\">$title</a></td>";
-                            echo "<td>" . $video_progress. "</td>";
-                            echo "<td>" . $row["total_duration"]. "</td>";
+                            echo "<td>" . gmdate("H:i:s", (int)$video_progress). "</td>";
+                            echo "<td>" . gmdate("H:i:s", (int)$row["total_duration"]). "</td>";
                             echo "<td><a href=$url target=\"_blank\">View</a></td>";
                             echo "</tr>";
                         }
