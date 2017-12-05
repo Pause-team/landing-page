@@ -26,7 +26,7 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-danger my-2 my-sm-0" type="submit">Sign Out</button>
+                <button id="signout" class="btn btn-danger my-2 my-sm-0" type="submit">Sign Out</button>
             </form>
         </div>
     </nav>
@@ -137,6 +137,9 @@
 
         $(".open-link").click(function(e){
             window.open(e.currentTarget.dataset.link);
+        });
+        $("#signout").click(function(e){
+            window.open("/index.php", "_self");
         });
     </script>
 </body>
