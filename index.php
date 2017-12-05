@@ -78,7 +78,7 @@
           <h6>Download Our Extension</h6>
           <ul class="list-inline intro-social-buttons">
           <li class="list-inline-item">
-              <a href="#" class="btn btn-secondary btn-lg">
+              <a href="https://github.com/Pause-team/Pause/releases/download/1.0.0/chrome_extension.crx" class="btn btn-secondary btn-lg">
                 <i class="fa fa-chrome fa-fw"></i>
                 <span class="network-name">Chrome Extension</span>
               </a>

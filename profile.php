@@ -25,9 +25,8 @@
             <a class="navbar-brand" href="#">Pause</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button id="signout" class="btn btn-danger my-2 my-sm-0" type="submit">Sign Out</button>
-            </form>
+                <!-- <button id="signout" class="btn btn-danger my-2 my-sm-0" type="submit">Sign Out</button> -->
+                <a class="my-2 my-sm-0" href="https://pause.trixster.xyz/">Sign Out</a>
         </div>
     </nav>
     <div class="container main-body">
