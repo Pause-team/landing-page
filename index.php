@@ -56,7 +56,7 @@
           <h6>Automatically track what you're watching.</h6>
           <hr class="intro-divider">
           <ul class="list-inline intro-social-buttons">
-            <li class="list-inline-item">
+            <!--<li class="list-inline-item">
               <a href="#" class="btn btn-secondary btn-lg" onclick="signIn3();">
                 <i class="fa fa-twitter fa-fw"></i>
                 <span class="network-name">Twitter</span>
@@ -67,7 +67,7 @@
                 <i class="fa fa-facebook fa-fw"></i>
                 <span class="network-name">Facebook</span>
               </a>
-            </li>
+            </li>-->
             <li class="list-inline-item">
               <a href="#" class="btn btn-secondary btn-lg" id="chromeSignIn">
                 <i class="fa fa-google fa-fw"></i>
