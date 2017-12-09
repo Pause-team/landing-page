@@ -69,6 +69,7 @@
               </a>
             </li>-->
             <li class="list-inline-item">
+              <p>login with:</p>
               <a href="#" class="btn btn-secondary btn-lg" id="chromeSignIn">
                 <i class="fa fa-google fa-fw"></i>
                 <span class="network-name">Google</span>
