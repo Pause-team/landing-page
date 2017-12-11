@@ -40,7 +40,7 @@ span>
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             $userName = $row['name'];
-            echo "<h2 id='username'>Welcome, $userName</h2>";
+            echo "<h2 id='username'>Welcome $userName,</h2>";
             ?>
         </div>
         <div class="jumbotron">
