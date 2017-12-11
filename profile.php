@@ -19,18 +19,22 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand" href="#">Pause</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             </ul>
                 <!-- <button id="signout" class="btn btn-danger my-2 my-sm-0" type="submit">Sign Out</button> -->
-                <a class="my-2 my-sm-0" href="https://pause.trixster.xyz/">Sign Out</a>
+                
+                <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit" href="https://pause.trixster.xyz/">Sign Out</button>
+                </form>
         </div>
     </nav>
     <div class="container main-body">
-        <div class="jumbotron">
+   <div class="jumbotron">
             <!-- Add username -->
             <?php
             include "database/config.php";
@@ -39,19 +43,22 @@
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             $userName = $row['name'];
+<<<<<<< HEAD
             echo "<h2 id='username'>Welcome, $userName</h2>";
+=======
+            echo "<h2 id='username'>Welcome $userName,</h2>";
+>>>>>>> 1c3ad9009bc42fff427ca88045a8bddd417c4fd1
             ?>
         </div>
         <div class="jumbotron">
-            <h4>Watched Videos</h4>
-            <table class="table">
+            <h4>Watching</h4>
+            <table class="table table-striped ">
                 <thead class="thead-dark">
                     <tr>
-                        <th>#</th>
+
                         <th>Title</th>
                         <th>Progress</th>
-                        <th>Total Time</th>
-                        <th>Actions</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -65,11 +72,8 @@
                             $url = $row['url'].'#t='.$row['video_progress'];
                             $title = $row['video_title'];
                             echo "<tr>";
-                            echo "<td>" . $row["video_id"]. "</td>";
                             echo "<td><a href=$url class='video_name' target=\"_blank\">$title</a></td>";
-                            echo "<td>" . gmdate("H:i:s", (int)$video_progress). "</td>";
-                            echo "<td>" . gmdate("H:i:s", (int)$row["total_duration"]). "</td>";
-                            echo "<td><a href=$url target=\"_blank\">View</a></td>";
+                            echo "<td>" . gmdate("H:i:s", (int)$video_progress). "/" . gmdate("H:i:s", (int)$row["total_duration"])."</td>";
                             echo "</tr>";
                         }
                         ?>
